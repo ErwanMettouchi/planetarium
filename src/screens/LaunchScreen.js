@@ -4,12 +4,12 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import bgImage from '../../assets/images/launch_bg.jpg';
 
-export default function LaunchScreen({navigation}) {
+export default function LaunchScreen({ navigation }) {
     return (
         <ImageBackground style={styles.container} source={bgImage}>
             <SafeAreaView style={styles.container}>
                 <Text style={styles.titre}>Planetarium</Text>
-                <TouchableOpacity style={styles.button} onPress={()=> navigation.navigate('Home')}>
+                <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Navigation')}>
                     <Text style={styles.buttonText}>Commencer</Text>
                 </TouchableOpacity>
             </SafeAreaView>
