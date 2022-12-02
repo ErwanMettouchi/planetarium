@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import HomeTerre from '../../assets/images/home-terre.jpg'
 import Constants from 'expo-constants';
+
+const width = Dimensions.get('window').width
 
 export default function HomeScreen() {
     return (
@@ -33,8 +35,16 @@ const styles = StyleSheet.create({
     },
     paragraphe: {
         color: "#C4EEF2",
-        fontFamily: "openSansMedium",
-        paddingHorizontal: 20,
-        fontSize: 15
+        fontFamily: "openSansLight",
+        textAlign: "justify",
+        fontSize: 20,
+        marginBottom: 15
+    },
+    scrollView: {
+        paddingHorizontal: 15
+    },
+    image: {
+        width: width -30,
+        height: width * 608 / 1821
     }
 })
